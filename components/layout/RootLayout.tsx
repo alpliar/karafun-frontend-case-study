@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, Stack } from '@chakra-ui/react';
 import React, { PropsWithChildren } from 'react';
 import Header from '../Header';
 
@@ -6,10 +6,10 @@ import Header from '../Header';
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Box bg="tomato">
+    <Stack>
       <Header />
       {children}
-    </Box>
+    </Stack>
   );
 };
 
