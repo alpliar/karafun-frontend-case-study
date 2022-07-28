@@ -25,6 +25,7 @@ const Home: NextPage = () => {
       <Button colorScheme="facebook" rounded="full" maxW="3xs">
         {t('common:letsGo')} ➜
       </Button>
+      <Text opacity="60%">{t('home-page:usuallyCompletesIn', { minutes: 3 })}</Text>
     </Stack>
   );
 };

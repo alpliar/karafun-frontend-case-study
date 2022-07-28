@@ -3,5 +3,6 @@
   "subtitle": "with $t(common:website.name)",
   "needHelp": "Need help",
   "estimatedDuration": "±{{duration}} minutes",
-  "descriptionText": "Welcome to KarafunBusiness! \nFollow the steps below to setup your business account."
+  "descriptionText": "Welcome to KarafunBusiness! \nFollow the steps below to setup your business account.",
+  "usuallyCompletesIn": "Usually completes in {{minutes}} minutes"
 }
