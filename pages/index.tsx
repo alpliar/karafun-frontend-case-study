@@ -14,6 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Text>{t('home-page:needHelp')}</Text>
+      <Text>{t('home-page:estimatedDuration', { duration: '3' })}</Text>
       <Heading>{t('home-page:h1')}</Heading>
     </Stack>
   );
