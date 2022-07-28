@@ -15,9 +15,13 @@ const Home: NextPage = () => {
       </Head>
       <Text>{t('home-page:needHelp')}</Text>
       <Text>{t('home-page:estimatedDuration', { duration: '3' })}</Text>
-      <Heading>{t('home-page:title')}</Heading>
-      <Heading>{t('home-page:subtitle')}</Heading>
+      <Heading whiteSpace="pre-wrap">
+        {t('home-page:title')}
+        {'\n'}
+        {t('home-page:subtitle')}
+      </Heading>
       <Divider maxW={64} borderColor="orange.600" borderBottomWidth={4} />
+      <Text whiteSpace="pre-wrap">{t('home-page:descriptionText')}</Text>
     </Stack>
   );
 };
