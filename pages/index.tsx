@@ -6,9 +6,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 const Home: NextPage = () => {
-  const { t } = useTranslation('home-page');
+  const { t } = useTranslation(['home-page', 'common']);
   return (
     <div>
+      <Head>
+        <title>{t('common:meta.title')}</title>
+        <meta name="description" content={t('common:meta.description')} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Heading>{t('h1')}</Heading>
     </div>
   );
