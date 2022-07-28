@@ -1,4 +1,4 @@
-import { Heading, Text } from '@chakra-ui/react';
+import { Heading, Stack, Text } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -7,7 +7,7 @@ import Head from 'next/head';
 const Home: NextPage = () => {
   const { t } = useTranslation(['home-page', 'common']);
   return (
-    <div>
+    <Stack>
       <Head>
         <title>{t('common:meta.title')}</title>
         <meta name="description" content={t('common:meta.description')} />
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <Text>{t('home-page:needHelp')}</Text>
       <Heading>{t('home-page:h1')}</Heading>
-    </div>
+    </Stack>
   );
 };
 
