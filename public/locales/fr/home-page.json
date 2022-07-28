@@ -1,3 +1,8 @@
 {
-  "h1": "Un simple exemple de titre"
+  "title": "Démarrer",
+  "subtitle": "avec $t(common:website.name)",
+  "needHelp": "Besoin d'aide",
+  "estimatedDuration": "±{{duration}} minutes",
+  "descriptionText": "Bienvenue sur Karafun Business ! \nSuivez les étapes ci-dessous pour ouvrir un compte pro",
+  "usuallyCompletesIn": "Se termine généralement en {{minutes}} minutes"
 }

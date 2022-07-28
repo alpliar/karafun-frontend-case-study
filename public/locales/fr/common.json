@@ -1,10 +1,10 @@
 {
-  "h1": "Un exemple simple",
   "website": {
-    "name": "Karafun"
+    "name": "Karafun Business"
   },
   "meta": {
     "title": "$t(common:website.name) | Étude de cas frontend",
     "description": "Un exemple d'implémentation de l'étude de cas frontend Karafun"
-  }
+  },
+  "letsGo": "C'est parti"
 }
