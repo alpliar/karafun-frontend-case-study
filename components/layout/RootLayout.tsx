@@ -6,9 +6,9 @@ import Header from '../Header';
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Stack>
+    <Stack as="main">
       <Header />
-      {children}
+      <section>{children}</section>
     </Stack>
   );
 };
