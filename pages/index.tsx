@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <meta name="description" content={t('common:meta.description')} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Heading>{t('h1')}</Heading>
+      <Heading>{t('home-page:h1')}</Heading>
     </div>
   );
 };
