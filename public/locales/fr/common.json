@@ -1,3 +1,10 @@
 {
-  "h1": "Un exemple simple"
+  "h1": "Un exemple simple",
+  "website": {
+    "name": "Karafun"
+  },
+  "meta": {
+    "title": "@common:website.name | Étude de cas frontend",
+    "description": "Un exemple d'implémentation de l'étude de cas frontend Karafun"
+  }
 }
