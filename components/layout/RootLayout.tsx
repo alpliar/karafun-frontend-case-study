@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import React, { PropsWithChildren } from 'react';
 import Header from '../Header';
 
