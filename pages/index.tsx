@@ -1,4 +1,4 @@
-import { Divider, Heading, Stack, Text } from '@chakra-ui/react';
+import { Button, Divider, Heading, Stack, Text } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -22,6 +22,9 @@ const Home: NextPage = () => {
       </Heading>
       <Divider maxW={64} borderColor="orange.600" borderBottomWidth={4} />
       <Text whiteSpace="pre-wrap">{t('home-page:descriptionText')}</Text>
+      <Button colorScheme="facebook" rounded="full" maxW="3xs">
+        {t('common:letsGo')} ➜
+      </Button>
     </Stack>
   );
 };
