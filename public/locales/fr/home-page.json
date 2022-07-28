@@ -1,5 +1,6 @@
 {
-  "h1": "Un simple exemple de titre",
+  "title": "Démarrer",
+  "subtitle": "avec $t(common:website.name)",
   "needHelp": "Besoin d'aide",
   "estimatedDuration": "±{{duration}} minutes"
 }

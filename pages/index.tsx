@@ -15,7 +15,8 @@ const Home: NextPage = () => {
       </Head>
       <Text>{t('home-page:needHelp')}</Text>
       <Text>{t('home-page:estimatedDuration', { duration: '3' })}</Text>
-      <Heading>{t('home-page:h1')}</Heading>
+      <Heading>{t('home-page:title')}</Heading>
+      <Heading>{t('home-page:subtitle')}</Heading>
     </Stack>
   );
 };

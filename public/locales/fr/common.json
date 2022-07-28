@@ -1,7 +1,7 @@
 {
   "h1": "Un exemple simple",
   "website": {
-    "name": "Karafun"
+    "name": "Karafun Business"
   },
   "meta": {
     "title": "$t(common:website.name) | Étude de cas frontend",
