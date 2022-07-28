@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 
 const Home: NextPage = () => {
-  const { t } = useTranslation(['home-page', 'common']);
+  const { t } = useTranslation('home-page');
   return (
     <div>
       <Head>
