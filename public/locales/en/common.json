@@ -4,7 +4,7 @@
     "name": "Karafun"
   },
   "meta": {
-    "title": "@common:website.name | Frontend case study",
+    "title": "$t(common:website.name) | Frontend case study",
     "description": "An example of implémentation of Karafun frontend case study"
   }
 }

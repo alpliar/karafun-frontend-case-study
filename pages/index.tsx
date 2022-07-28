@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 
 const Home: NextPage = () => {
-  const { t } = useTranslation('home-page');
+  const { t } = useTranslation(['home-page', 'common']);
   return (
     <div>
       <Head>
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <meta name="description" content={t('common:meta.description')} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Heading>{t('h1')}</Heading>
+      <Heading>{t('home-page:h1')}</Heading>
     </div>
   );
 };
