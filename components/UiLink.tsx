@@ -10,12 +10,13 @@ interface UiLinkProps {
 const UiLink: React.FC<PropsWithChildren<UiLinkProps>> = ({ children, href, asButton = false }) => {
   return (
     <NextLink href={href} passHref>
-      {asButton && (
+      {asButton ? (
         <Button colorScheme="facebook" rounded="full" maxW={{ sm: 32 }} as={Link}>
           {children}
         </Button>
+      ) : (
+        <Link>{children}</Link>
       )}
-      {/* {!asButton && <Link>{children}</Link>} */}
     </NextLink>
   );
 };
