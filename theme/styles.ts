@@ -9,13 +9,14 @@ const styles: Styles = {
       body: {
         bg: mode('#E9ECFE', '#351791')(props),
         color: mode('midnightblue', 'white')(props),
+        margin: 'auto',
+        maxW: '6xl',
       },
       main: {
         bg: mode('white', 'black')(props),
         padding: biggerSpacing,
         margin: defaultSpacing,
         rounded: '2xl',
-        maxW: '6xl',
       },
     };
   },
