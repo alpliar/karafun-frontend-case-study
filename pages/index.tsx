@@ -3,6 +3,8 @@ import type { GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
+import { FaRegClock, FaRegQuestionCircle } from 'react-icons/fa';
+import IconWithText from '../components/IconWithText';
 import UiLink from '../components/UiLink';
 import UiTitle from '../components/UiTitle';
 
@@ -16,8 +18,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex wrap={{ base: 'wrap', md: 'nowrap' }} justify="space-between" gap={2}>
-        <Text color="youpi">{t('home-page:needHelp')}</Text>
-        <Text>{t('home-page:estimatedDuration', { duration: '3' })}</Text>
+        <IconWithText icon={FaRegQuestionCircle}>{t('home-page:needHelp')}</IconWithText>
+        <IconWithText icon={FaRegClock} color="#FB6B4B">
+          {t('home-page:estimatedDuration', { duration: '3' })}
+        </IconWithText>
       </Flex>
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
         <Stack spacing={4}>
