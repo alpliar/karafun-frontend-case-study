@@ -15,6 +15,7 @@ const styles: Styles = {
         padding: biggerSpacing,
         margin: defaultSpacing,
         rounded: '2xl',
+        maxW: '6xl',
       },
     };
   },
