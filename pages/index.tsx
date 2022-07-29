@@ -1,4 +1,4 @@
-import { Divider, Flex, Heading, Stack, Text } from '@chakra-ui/react';
+import { Box, Divider, Flex, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import type { GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -19,13 +19,24 @@ const Home: NextPage = () => {
         <Text color="youpi">{t('home-page:needHelp')}</Text>
         <Text>{t('home-page:estimatedDuration', { duration: '3' })}</Text>
       </Flex>
-      <UiTitle title={t('home-page:title')}>{t('home-page:subtitle')}</UiTitle>
-      <Divider maxW={32} borderColor="#FB6B4B" opacity={1} borderBottomWidth={4} />
-      <Text whiteSpace="pre-wrap">{t('home-page:descriptionText')}</Text>
-      <UiLink href="/form" asButton>
-        {t('common:letsGo')} ➜
-      </UiLink>
-      <Text opacity="60%">{t('home-page:usuallyCompletesIn', { minutes: 3 })}</Text>
+      <SimpleGrid columns={{ base: 1, lg: 2 }}>
+        <Stack spacing={4}>
+          <UiTitle title={t('home-page:title')}>{t('home-page:subtitle')}</UiTitle>
+          <Divider maxW={32} borderColor="#FB6B4B" opacity={1} borderBottomWidth={4} />
+          <Text whiteSpace="pre-wrap">{t('home-page:descriptionText')}</Text>
+          <UiLink href="/form" asButton>
+            {t('common:letsGo')} ➜
+          </UiLink>
+          <Text opacity="60%">{t('home-page:usuallyCompletesIn', { minutes: 3 })}</Text>
+        </Stack>
+        <Box>
+          <Image
+            src="/homepage-illustration.webp"
+            alt="Illustration of Karafun Business"
+            h={{ base: 256, lg: 320 }}
+          />
+        </Box>
+      </SimpleGrid>
     </Stack>
   );
 };
