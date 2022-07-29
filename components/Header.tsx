@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header: React.FC = ({}) => {
   return (
-    <Box>
+    <Box as="header">
       <Heading>Karafun Business</Heading>
     </Box>
   );

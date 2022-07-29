@@ -8,7 +8,7 @@ import UiLink from '../components/UiLink';
 const Home: NextPage = () => {
   const { t } = useTranslation(['home-page', 'common']);
   return (
-    <Stack as="header" spacing={4}>
+    <Stack spacing={4}>
       <Head>
         <title>{t('common:meta.title')}</title>
         <meta name="description" content={t('common:meta.description')} />
