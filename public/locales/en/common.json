@@ -6,5 +6,7 @@
     "title": "$t(common:website.name) | Frontend case study",
     "description": "An example of implémentation of Karafun frontend case study"
   },
-  "letsGo": "Let's go"
+  "letsGo": "Let's go",
+  "minutes_one": "minute",
+  "minutes_many": "minutes"
 }

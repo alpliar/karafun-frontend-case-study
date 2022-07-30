@@ -1,18 +1,26 @@
-import { Box, Button, Link } from '@chakra-ui/react';
+import { Box, Button, ColorProps, Link, ThemingProps } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import React, { PropsWithChildren } from 'react';
 
 interface UiLinkProps {
   href: string;
   asButton?: boolean;
+  color?: ColorProps['color'];
+  variant?: ThemingProps['variant'];
 }
 
-const UiLink: React.FC<PropsWithChildren<UiLinkProps>> = ({ children, href, asButton = false }) => {
+const UiLink: React.FC<PropsWithChildren<UiLinkProps>> = ({
+  children,
+  href,
+  asButton = false,
+  color = undefined,
+  variant = 'solid',
+}) => {
   return (
     <Box pt={{ base: 2, lg: 8 }} pb={{ base: 2, lg: 8 }}>
       <NextLink href={href} passHref>
         {asButton ? (
-          <Button colorScheme="facebook" rounded="full" maxW={{ sm: 32 }} as={Link}>
+          <Button colorScheme="facebook" color={color} variant={variant} rounded="full" as={Link}>
             {children}
           </Button>
         ) : (

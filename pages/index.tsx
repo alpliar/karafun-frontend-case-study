@@ -10,6 +10,8 @@ import UiTitle from '../components/UiTitle';
 
 const Home: NextPage = () => {
   const { t } = useTranslation(['home-page', 'common']);
+  const formDuration = 3;
+
   return (
     <Stack spacing={4}>
       <Head>
@@ -20,7 +22,9 @@ const Home: NextPage = () => {
       <Flex wrap={{ base: 'wrap', md: 'nowrap' }} justify="space-between" gap={2}>
         <IconWithText icon={FaRegQuestionCircle}>{t('home-page:needHelp')}</IconWithText>
         <IconWithText icon={FaRegClock} color="#FB6B4B">
-          {t('home-page:estimatedDuration', { duration: '3' })}
+          <strong>±{formDuration}</strong>
+          {` `}
+          {t('common:minutes', { count: formDuration })}
         </IconWithText>
       </Flex>
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={8}>
@@ -31,7 +35,7 @@ const Home: NextPage = () => {
           <UiLink href="/form" asButton>
             {t('common:letsGo')} ➜
           </UiLink>
-          <Text opacity="60%">{t('home-page:usuallyCompletesIn', { minutes: 3 })}</Text>
+          <Text opacity="60%">{t('home-page:usuallyCompletesIn', { count: formDuration })}</Text>
         </Stack>
         <Center>
           <Image

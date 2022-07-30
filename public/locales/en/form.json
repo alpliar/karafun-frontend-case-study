@@ -1,0 +1,38 @@
+{
+  "step1": {
+    "title": "What kind of business are you starting/running?",
+    "answers": {
+      "karaoke": "Private Suites Karaoke Box",
+      "complex": "Entertainment Complex (Bowling, Arcade, etc)",
+      "hospitality": "Hospitality (hotels, restaurant chains)",
+      "camping": "Camping Site",
+      "rental": "DJ & Rental Services",
+      "dj": "I'm a DJ/KJ myself",
+      "other": "Other"
+    },
+    "submitLabel": "Let's go ➜"
+  },
+  "step2": {
+    "title": "When are you opening your venue?",
+    "answers": {
+      "morethan6months": "In more than 6 months",
+      "3to6months": "In 3 to 6 months",
+      "lessthan3months": "In less than 3 months",
+      "opened": "I have already opened"
+    },
+    "submitLabel": "Continue ➜"
+  },
+  "step3": {
+    "pretitle": "Great!",
+    "title": "Let's get your account setup.",
+    "submitLabel": "Finish ➜",
+    "fields": {
+      "firstName": "First name",
+      "firstNameHelperText": "Enter your first name",
+      "lastName": "Last name",
+      "lastNameHelperText": "Enter your last name",
+      "email": "Email",
+      "emailHelperText": "Enter your email"
+    }
+  }
+}

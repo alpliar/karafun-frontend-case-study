@@ -11,14 +11,16 @@ const UiTitle: React.FC<PropsWithChildren<UiTitleProps>> = ({ children, title = 
       fontSize="5xl"
       lineHeight={{ base: '1em', md: '1.25em' }}
       whiteSpace="pre-wrap"
-      maxWidth="2xl"
+      maxWidth="3xl"
     >
       {title && (
-        <Text as="span" color="#4F52FE">
-          {title}
-        </Text>
+        <>
+          <Text as="span" color="#4F52FE">
+            {title}
+          </Text>
+          {'\n'}
+        </>
       )}
-      {'\n'}
       <Text as="span">{children}</Text>
     </Heading>
   );

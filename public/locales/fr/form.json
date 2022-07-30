@@ -1,0 +1,38 @@
+{
+  "step1": {
+    "title": "Quel type d'établissement possédez/démarrez vous ?",
+    "answers": {
+      "karaoke": "Cabines privées de karaoké",
+      "complex": "Complexe de divertissement (Bowling, Arcade, etc.)",
+      "hospitality": "Hospitalité (hôtels, chaîne de restaurants)",
+      "camping": "Camping",
+      "rental": "DJ et services de location",
+      "dj": "Je suis moi-même DJ/KJ",
+      "other": "Autre"
+    },
+    "submitLabel": "Allons-y ➜"
+  },
+  "step2": {
+    "title": "Quand ouvrez-vous votre salle ?",
+    "answers": {
+      "morethan6months": "Dans plus de 6 mois",
+      "3to6months": "Dans 3 à 6 mois",
+      "lessthan3months": "Dans moins de 3 mois",
+      "opened": "Déjà ouvert"
+    },
+    "submitLabel": "Poursuivre ➜"
+  },
+  "step3": {
+    "pretitle": "Super !",
+    "title": "Configurons maintenant votre compte.",
+    "submitLabel": "Terminer ➜",
+    "fields": {
+      "firstName": "Prénom",
+      "firstNameHelperText": "Saisissez votre prénom",
+      "lastName": "Nom de famille",
+      "lastNameHelperText": "Saisissez votre nom de famille",
+      "email": "Email",
+      "emailHelperText": "Saisissez votre email"
+    }
+  }
+}

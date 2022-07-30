@@ -1,10 +1,10 @@
 // theme/index.js
-import { extendTheme, ThemeConfig, ThemeOverride } from '@chakra-ui/react';
+import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 
 // Global style overrides
-import styles from './styles';
-import fonts from './fonts';
 import breakpoints from './breakpoints';
+import fonts from './fonts';
+import styles from './styles';
 
 // Component style overrides
 const config: ThemeConfig = {
