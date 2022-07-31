@@ -6,6 +6,7 @@ import {
   Icon,
   IconButton,
   Image,
+  Link,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -21,13 +22,14 @@ const Header: React.FC = ({}) => {
     <Flex as="header" justify="space-between">
       <Image src="/logo.svg" alt="Karafun" width={32} height="auto" />
       <HStack>
-        <NextLink href={router.asPath} passHref locale="fr">
-          fr
-        </NextLink>
-        {` `}/{` `}
-        <NextLink href={router.asPath} passHref locale="en">
-          en
-        </NextLink>
+        {router.locales?.map((locale) => {
+          return (
+            <NextLink key={locale} href={router.asPath} passHref locale={locale}>
+              <Link>{locale}</Link>
+            </NextLink>
+          );
+        })}
+
         <IconButton
           size="sm"
           onClick={toggleColorMode}
