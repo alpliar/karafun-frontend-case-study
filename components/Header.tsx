@@ -6,6 +6,7 @@ import {
   IconButton,
   Image,
   Link,
+  StyleProps,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -17,9 +18,14 @@ const Header: React.FC = ({}) => {
   const { toggleColorMode } = useColorMode();
   const router = useRouter();
   const ToggleIcon = useColorModeValue(MoonIcon, SunIcon);
+
+  const logoStyle: StyleProps = {
+    filter: useColorModeValue('undefined', 'invert(1)'),
+  };
+
   return (
     <Flex as="header" justify="space-between">
-      <Image src="/logo.svg" alt="Karafun" width={32} height="auto" />
+      <Image {...logoStyle} src="/logo.svg" alt="Karafun" width={32} height="auto" />
       <HStack>
         {router.locales?.map((locale) => {
           return (
