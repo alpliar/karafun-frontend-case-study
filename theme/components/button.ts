@@ -7,6 +7,7 @@ const Button: ComponentStyleConfig = {
   },
   variants: {
     solid: {
+      paddingX: 12,
       bg: '#351791',
       color: 'white',
       _hover: {
@@ -14,10 +15,6 @@ const Button: ComponentStyleConfig = {
       },
       rounded: 'full',
     },
-  },
-  // The default size and variant values
-  defaultProps: {
-    paddingX: 12,
   },
 };
 
