@@ -12,11 +12,11 @@ const Button: ComponentStyleConfig = {
       _hover: {
         bg: '#351791',
       },
+      rounded: 'full',
     },
   },
   // The default size and variant values
   defaultProps: {
-    rounded: 'full',
     paddingX: 12,
   },
 };
