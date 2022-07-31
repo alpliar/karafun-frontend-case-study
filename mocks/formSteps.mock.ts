@@ -102,7 +102,7 @@ const formSteps: Array<IFormStep> = [
       {
         label: 'form:step3.fields.email',
         name: 'email',
-        helpText: 'form:step3.field.emailHelperText',
+        helpText: 'form:step3.fields.emailHelperText',
         type: 'email',
       },
     ],
