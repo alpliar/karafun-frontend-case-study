@@ -1,4 +1,4 @@
-import { Box, Button, createStandaloneToast, Flex, Progress, Stack, Text } from '@chakra-ui/react';
+import { Box, createStandaloneToast, Flex, Progress, Stack, Text } from '@chakra-ui/react';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';

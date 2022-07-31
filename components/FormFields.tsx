@@ -1,13 +1,4 @@
-import {
-  Box,
-  Button,
-  FormControl,
-  FormHelperText,
-  FormLabel,
-  Input,
-  SimpleGrid,
-  Stack,
-} from '@chakra-ui/react';
+import { Box, FormControl, FormHelperText, FormLabel, Input, SimpleGrid, Stack } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React, { FormEventHandler } from 'react';
 import { IFormField, IFormFields, IFormInformations } from '../models/form.model';
