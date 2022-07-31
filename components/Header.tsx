@@ -1,6 +1,5 @@
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {
-  Box,
   Flex,
   HStack,
   Icon,
