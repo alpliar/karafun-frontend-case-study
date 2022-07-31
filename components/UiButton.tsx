@@ -1,4 +1,4 @@
-import { Button, ButtonProps, StyleProps } from '@chakra-ui/react';
+import { Button, ButtonProps } from '@chakra-ui/react';
 import React, { PropsWithChildren } from 'react';
 
 interface IUiButtonProps {
@@ -8,13 +8,6 @@ interface IUiButtonProps {
   type?: ButtonProps['type'];
 }
 
-export const buttonStyle: ButtonProps | StyleProps = {
-  colorScheme: 'facebook',
-  rounded: 'full',
-  //   maxW: { sm: 32 },
-  paddingX: 12,
-};
-
 const UiButton: React.FC<PropsWithChildren<IUiButtonProps>> = ({
   children,
   disabled = false,
@@ -23,7 +16,7 @@ const UiButton: React.FC<PropsWithChildren<IUiButtonProps>> = ({
   type,
 }) => {
   return (
-    <Button variant={variant} disabled={disabled} onClick={onClick} type={type} {...buttonStyle}>
+    <Button variant={variant} disabled={disabled} onClick={onClick} type={type}>
       {children}
     </Button>
   );

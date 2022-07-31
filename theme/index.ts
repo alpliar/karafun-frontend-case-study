@@ -5,6 +5,7 @@ import { extendTheme, ThemeConfig } from '@chakra-ui/react';
 import breakpoints from './breakpoints';
 import fonts from './fonts';
 import styles from './styles';
+import Button from './components/button';
 
 // Component style overrides
 const config: ThemeConfig = {
@@ -18,6 +19,9 @@ const overrides = {
   config,
   styles,
   breakpoints,
+  components: {
+    Button,
+  },
 };
 
 export default extendTheme(overrides);
