@@ -34,5 +34,9 @@
       "email": "Email",
       "emailHelperText": "Saisissez votre email"
     }
+  },
+  "confirmation": {
+    "title": "Demande transmise !",
+    "text": "Merci {{name}} ! Nous reviendrons rapidement vers vous avec un devis !"
   }
 }

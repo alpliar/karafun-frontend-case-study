@@ -34,5 +34,9 @@
       "email": "Email",
       "emailHelperText": "Enter your email"
     }
+  },
+  "confirmation": {
+    "title": "Request submitted!",
+    "text": "Thanks {{name}}! We'll be back asap with a cost estimate !"
   }
 }

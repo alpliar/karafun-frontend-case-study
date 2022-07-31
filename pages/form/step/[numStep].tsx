@@ -30,8 +30,8 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
     setAnswer(undefined);
     if (step.isFinalStep) {
       toast({
-        title: 'Request submitted.',
-        description: `Thanks ${formInfos.firstName}! We'll be back asap with a cost estimate`,
+        title: t('form:confirmation.title'),
+        description: t('form:confirmation.text', { name: formInfos.firstName }),
         status: 'success',
         isClosable: true,
       });
