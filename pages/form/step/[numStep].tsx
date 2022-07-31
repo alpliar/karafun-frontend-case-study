@@ -8,7 +8,7 @@ import FormAnswers from '../../../components/FormAnswers';
 import FormFields from '../../../components/FormFields';
 import UiTitle from '../../../components/UiTitle';
 import formSteps from '../../../mocks/formSteps.mock';
-import { IFormStep } from '../../../models/form.model';
+import { IFormInformations, IFormStep } from '../../../models/form.model';
 
 interface IFormStepPageProps {
   stepNumber: string;
@@ -18,6 +18,11 @@ interface IFormStepPageProps {
 const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
   const { t } = useTranslation(['form', 'common']);
   const [answer, setAnswer] = useState<string | undefined>(undefined);
+  const [formInfos, setFormInfos] = useState<IFormInformations>({
+    firstName: '',
+    lastName: '',
+    email: '',
+  });
   const { toast } = createStandaloneToast();
   const router = useRouter();
 
@@ -26,7 +31,7 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
     if (step.isFinalStep) {
       toast({
         title: 'Request submitted.',
-        description: `We'll be back asap with a cost estimate`,
+        description: `Thanks ${formInfos.firstName}! We'll be back asap with a cost estimate`,
         status: 'success',
         isClosable: true,
       });
@@ -47,6 +52,10 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
     setAnswer(value);
   };
 
+  const handleForm = (newFormInfos: IFormInformations) => {
+    setFormInfos(newFormInfos);
+  };
+
   return (
     <Stack spacing={10}>
       <Flex wrap={{ base: 'wrap', sm: 'nowrap' }} align="center" justify="center" gap={4}>
@@ -57,17 +66,26 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
 
       {step.answers.length > 0 && <FormAnswers answers={step.answers} onChange={handleAnswer} />}
 
-      {step.fields.length > 0 && <FormFields fields={step.fields} />}
+      {step.fields.length > 0 && (
+        <FormFields
+          onSubmit={handleSubmit}
+          onChange={handleForm}
+          fields={step.fields}
+          submitLabel={t(step.submitLabel)}
+        />
+      )}
 
-      <Button
-        disabled={!answer}
-        onClick={handleSubmit}
-        colorScheme="facebook"
-        rounded="full"
-        maxW={{ sm: 32 }}
-      >
-        {t(step.submitLabel)}
-      </Button>
+      {!step.isFinalStep && (
+        <Button
+          disabled={!answer}
+          onClick={handleSubmit}
+          colorScheme="facebook"
+          rounded="full"
+          maxW={{ sm: 32 }}
+        >
+          {t(step.submitLabel)}
+        </Button>
+      )}
     </Stack>
   );
 };

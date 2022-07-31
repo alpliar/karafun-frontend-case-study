@@ -8,7 +8,7 @@ export type IFormAnswers = Array<IFormAnswer>;
 
 export interface IFormField {
   label: string;
-  name: string;
+  name: 'firstName' | 'email' | 'lastName';
   helpText: string;
   type: string;
 }
@@ -24,4 +24,10 @@ export interface IFormStep {
   answers: IFormAnswers;
   fields: IFormFields;
   submitLabel: string;
+}
+
+export interface IFormInformations {
+  firstName: string;
+  lastName: string;
+  email: string;
 }
