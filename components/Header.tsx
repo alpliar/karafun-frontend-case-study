@@ -25,7 +25,7 @@ const Header: React.FC = ({}) => {
         {router.locales?.map((locale) => {
           return (
             <NextLink key={locale} href={router.asPath} passHref locale={locale}>
-              <Link>{locale}</Link>
+              <Link fontWeight={router.locale === locale ? 'bold' : undefined}>{locale}</Link>
             </NextLink>
           );
         })}
