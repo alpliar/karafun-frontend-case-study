@@ -70,6 +70,7 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
         <FormFields
           onSubmit={handleSubmit}
           onChange={handleForm}
+          infos={formInfos}
           fields={step.fields}
           submitLabel={t(step.submitLabel)}
         />
