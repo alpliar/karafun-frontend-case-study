@@ -5,7 +5,7 @@ const formSteps: Array<IFormStep> = [
     id: 1,
     isFinalStep: false,
     progression: 15,
-    pretitle: null,
+    titlePrefix: null,
     title: 'form:step1.title',
     answers: [
       {
@@ -51,7 +51,7 @@ const formSteps: Array<IFormStep> = [
     id: 2,
     isFinalStep: false,
     progression: 50,
-    pretitle: null,
+    titlePrefix: null,
     title: 'form:step2.title',
     answers: [
       {
@@ -82,7 +82,7 @@ const formSteps: Array<IFormStep> = [
     id: 3,
     isFinalStep: true,
     progression: 85,
-    pretitle: 'form:step3.pretitle',
+    titlePrefix: 'form:step3.titlePrefix',
     title: 'form:step3.title',
     answers: [],
     submitLabel: 'form:step3.submitLabel',

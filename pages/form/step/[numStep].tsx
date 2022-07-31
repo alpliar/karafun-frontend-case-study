@@ -62,7 +62,7 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
         <Progress colorScheme="orange" rounded="md" value={step.progression} width="full" />
         <Text whiteSpace="nowrap">{step.progression}% completed</Text>
       </Flex>
-      <UiTitle title={t(step.pretitle as string)}>{t(step.title)}</UiTitle>
+      <UiTitle title={t(step.titlePrefix as string)}>{t(step.title)}</UiTitle>
 
       {step.answers.length > 0 && <FormAnswers answers={step.answers} onChange={handleAnswer} />}
 

@@ -23,7 +23,7 @@
     "submitLabel": "Poursuivre ➜"
   },
   "step3": {
-    "pretitle": "Super !",
+    "titlePrefix": "Super !",
     "title": "Configurons maintenant votre compte.",
     "submitLabel": "Terminer ➜",
     "fields": {

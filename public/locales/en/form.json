@@ -23,7 +23,7 @@
     "submitLabel": "Continue ➜"
   },
   "step3": {
-    "pretitle": "Great!",
+    "titlePrefix": "Great!",
     "title": "Let's get your account setup.",
     "submitLabel": "Finish ➜",
     "fields": {
