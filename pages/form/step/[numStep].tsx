@@ -1,5 +1,5 @@
 import { Button, createStandaloneToast, Flex, Progress, Stack, Text } from '@chakra-ui/react';
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
@@ -71,7 +71,7 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 
     if (typeof stepNumber !== 'string') throw new Error('stepNumber must be a string');
 
-    const step = formSteps.find(({ id }) => id === parseInt(stepNumber) - 1);
+    const step = formSteps.find(({ id }) => id === parseInt(stepNumber));
 
     if (!step) throw new Error('Step not found');
 
@@ -92,17 +92,20 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
 
 export default FormStepPage;
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = () => {
   const paths = formSteps.map((step) => {
     return {
       params: {
-        numStep: (step.id + 1).toString(),
+        numStep: step.id.toString(),
       },
     };
   });
 
   return {
-    paths,
+    paths: [
+      ...paths.map((path) => ({ ...path, locale: 'en' })),
+      ...paths.map((path) => ({ ...path, locale: 'fr' })),
+    ],
     fallback: false,
   };
-}
+};

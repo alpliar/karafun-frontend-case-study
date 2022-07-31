@@ -2,7 +2,7 @@ import { IFormStep } from '../models/form.model';
 
 const formSteps: Array<IFormStep> = [
   {
-    id: 0,
+    id: 1,
     isFinalStep: false,
     progression: 15,
     pretitle: null,
@@ -48,7 +48,7 @@ const formSteps: Array<IFormStep> = [
     fields: [],
   },
   {
-    id: 1,
+    id: 2,
     isFinalStep: false,
     progression: 50,
     pretitle: null,
@@ -79,7 +79,7 @@ const formSteps: Array<IFormStep> = [
     fields: [],
   },
   {
-    id: 2,
+    id: 3,
     isFinalStep: true,
     progression: 85,
     pretitle: 'form:step3.pretitle',
