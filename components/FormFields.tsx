@@ -6,6 +6,7 @@ import {
   FormLabel,
   Input,
   SimpleGrid,
+  Stack,
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import React, { FormEventHandler, useState } from 'react';
@@ -42,7 +43,7 @@ const FormFields: React.FC<IFormFieldProps> = ({ fields, onChange, onSubmit, sub
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Stack as="form" spacing={8} onSubmit={handleSubmit}>
       <SimpleGrid columns={{ base: 1, md: 2 }} gap={4}>
         {fields.map(({ label, name, type, helpText }) => {
           return (
@@ -53,13 +54,13 @@ const FormFields: React.FC<IFormFieldProps> = ({ fields, onChange, onSubmit, sub
             </FormControl>
           );
         })}
-        <Box>
-          <Button type="submit" colorScheme="facebook" rounded="full">
-            {submitLabel}
-          </Button>
-        </Box>
       </SimpleGrid>
-    </form>
+      <Box>
+        <Button type="submit" colorScheme="facebook" rounded="full">
+          {submitLabel}
+        </Button>
+      </Box>
+    </Stack>
   );
 };
 
