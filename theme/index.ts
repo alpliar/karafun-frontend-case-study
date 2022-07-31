@@ -6,6 +6,7 @@ import breakpoints from './breakpoints';
 import fonts from './fonts';
 import styles from './styles';
 import Button from './components/button';
+import Progress from './components/progress';
 
 // Component style overrides
 const config: ThemeConfig = {
@@ -21,6 +22,7 @@ const overrides = {
   breakpoints,
   components: {
     Button,
+    Progress,
   },
 };
 
