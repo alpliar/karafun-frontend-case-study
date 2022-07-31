@@ -7,8 +7,8 @@ const styles: Styles = {
 
     return {
       body: {
-        bg: mode('#E9ECFE', '#351791')(props),
-        color: mode('#351791', 'white')(props),
+        bg: mode('blue.50', 'blue.500')(props),
+        color: mode('blue.500', 'blue.50')(props),
         margin: 'auto',
         maxW: '6xl',
       },

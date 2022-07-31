@@ -6,15 +6,18 @@ const Button: ComponentStyleConfig = {
     fontWeight: 'bold',
   },
   variants: {
-    solid: {
-      paddingX: 12,
-      bg: '#351791',
-      color: 'white',
-      _hover: {
-        bg: '#351791',
-      },
-      rounded: 'full',
-    },
+    // solid: {
+    //   paddingX: 12,
+    //   bg: '#351791',
+    //   color: 'white',
+    //   _hover: {
+    //     bg: '#351791',
+    //   },
+    //   rounded: 'full',
+    // },
+  },
+  defaultProps: {
+    colorScheme: 'blue',
   },
 };
 
