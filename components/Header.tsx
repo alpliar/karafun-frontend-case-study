@@ -5,18 +5,15 @@ import {
   Icon,
   IconButton,
   Image,
-  Link,
   StyleProps,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
+import LocaleToggle from './LocaleToggle';
 
 const Header: React.FC = ({}) => {
   const { toggleColorMode } = useColorMode();
-  const router = useRouter();
   const ToggleIcon = useColorModeValue(MoonIcon, SunIcon);
 
   const logoStyle: StyleProps = {
@@ -27,13 +24,7 @@ const Header: React.FC = ({}) => {
     <Flex as="header" justify="space-between">
       <Image {...logoStyle} src="/logo.svg" alt="Karafun" width={32} height="auto" />
       <HStack>
-        {router.locales?.map((locale) => {
-          return (
-            <NextLink key={locale} href={router.asPath} passHref locale={locale}>
-              <Link fontWeight={router.locale === locale ? 'bold' : undefined}>{locale}</Link>
-            </NextLink>
-          );
-        })}
+        <LocaleToggle />
 
         <IconButton
           size="sm"
