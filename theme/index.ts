@@ -8,7 +8,6 @@ import colors from './colors';
 import styles from './styles';
 import Button from './components/button';
 import Progress from './components/progress';
-import Input from './components/input';
 
 // Component style overrides
 const config: ThemeConfig = {
@@ -26,7 +25,6 @@ const overrides = {
   components: {
     Button,
     Progress,
-    Input,
   },
 };
 

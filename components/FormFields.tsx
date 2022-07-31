@@ -36,6 +36,8 @@ const FormFields: React.FC<IFormFieldProps> = ({ fields, onChange, onSubmit, sub
             <FormControl isRequired key={name}>
               <FormLabel>{t(label)}</FormLabel>
               <Input
+                rounded="full"
+                size="lg"
                 type={type}
                 name={name}
                 value={infos[name]}
