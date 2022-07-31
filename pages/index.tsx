@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <UiTitle title={t('home-page:title')}>{t('home-page:subtitle')}</UiTitle>
           <Divider maxW={32} borderColor="#FB6B4B" opacity={1} borderBottomWidth={4} />
           <Text whiteSpace="pre-wrap">{t('home-page:descriptionText')}</Text>
-          <UiLink href="/form" asButton>
+          <UiLink href="/form/step/1" asButton>
             {t('common:letsGo')} ➜
           </UiLink>
           <Text opacity="60%">{t('home-page:usuallyCompletesIn', { count: formDuration })}</Text>

@@ -20,7 +20,7 @@ export interface IFormStep {
   isFinalStep: boolean;
   progression: number;
   title: string;
-  pretitle: string;
+  pretitle: string | null;
   answers: IFormAnswers;
   fields: IFormFields;
   submitLabel: string;
