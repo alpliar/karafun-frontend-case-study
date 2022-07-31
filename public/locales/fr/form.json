@@ -1,6 +1,6 @@
 {
   "step1": {
-    "title": "Quel type d'établissement possédez/démarrez vous ?",
+    "title": "Quel type d'établissement lancez vous ou gérez vous ?",
     "answers": {
       "karaoke": "Cabines privées de karaoké",
       "complex": "Complexe de divertissement (Bowling, Arcade, etc.)",
