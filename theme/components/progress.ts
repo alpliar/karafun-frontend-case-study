@@ -1,6 +1,7 @@
 const Progress = {
   baseStyle: {
     filledTrack: {
+      borderRadius: 'full',
       bg: '#FB6B4B',
     },
     track: {
