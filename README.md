@@ -1,5 +1,7 @@
 This is an example of implementation of KaraFun frontend case study, made with [Next.js](https://nextjs.org/).
 
+Instructions available at [Karafun's Figma page](https://www.figma.com/file/4XjALyOyvjPTKalxbaUcRT/Case-Study-%2F-Dev-Front?node-id=1%3A1651).
+
 ## Demo
 
 A working demo is available at [karafun-frontend-case-study.vercel.app](https://karafun-frontend-case-study.vercel.app/)
