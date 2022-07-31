@@ -1,4 +1,4 @@
-import { Button, createStandaloneToast, Flex, Progress, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, createStandaloneToast, Flex, Progress, Stack, Text } from '@chakra-ui/react';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import FormAnswers from '../../../components/FormAnswers';
 import FormFields from '../../../components/FormFields';
+import UiButton from '../../../components/UiButton';
 import UiTitle from '../../../components/UiTitle';
 import formSteps from '../../../mocks/formSteps.mock';
 import { IFormInformations, IFormStep } from '../../../models/form.model';
@@ -77,15 +78,11 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
       )}
 
       {!step.isFinalStep && (
-        <Button
-          disabled={!answer}
-          onClick={handleSubmit}
-          colorScheme="facebook"
-          rounded="full"
-          maxW={{ sm: 32 }}
-        >
-          {t(step.submitLabel)}
-        </Button>
+        <Box>
+          <UiButton disabled={!answer} onClick={handleSubmit}>
+            {t(step.submitLabel)}
+          </UiButton>
+        </Box>
       )}
     </Stack>
   );
