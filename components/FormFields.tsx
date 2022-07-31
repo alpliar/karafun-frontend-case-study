@@ -11,6 +11,7 @@ import {
 import { useTranslation } from 'next-i18next';
 import React, { FormEventHandler } from 'react';
 import { IFormField, IFormFields, IFormInformations } from '../models/form.model';
+import UiButton from './UiButton';
 
 interface IFormFieldProps {
   fields: IFormFields;
@@ -55,9 +56,7 @@ const FormFields: React.FC<IFormFieldProps> = ({ fields, onChange, onSubmit, sub
         })}
       </SimpleGrid>
       <Box>
-        <Button type="submit" colorScheme="facebook" rounded="full">
-          {submitLabel}
-        </Button>
+        <UiButton type="submit">{submitLabel}</UiButton>
       </Box>
     </Stack>
   );

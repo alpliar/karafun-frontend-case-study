@@ -3,8 +3,9 @@ import React, { PropsWithChildren } from 'react';
 
 interface IUiButtonProps {
   disabled?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   variant?: ButtonProps['variant'];
+  type?: ButtonProps['type'];
 }
 
 export const buttonStyle: ButtonProps | StyleProps = {
@@ -19,9 +20,10 @@ const UiButton: React.FC<PropsWithChildren<IUiButtonProps>> = ({
   disabled = false,
   onClick,
   variant,
+  type,
 }) => {
   return (
-    <Button variant={variant} disabled={disabled} onClick={onClick} {...buttonStyle}>
+    <Button variant={variant} disabled={disabled} onClick={onClick} type={type} {...buttonStyle}>
       {children}
     </Button>
   );
