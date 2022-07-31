@@ -17,11 +17,12 @@ interface IFormStepPageProps {
 
 const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
   const { t } = useTranslation(['form', 'common']);
-  const [answer, setAnswer] = useState<string>('');
+  const [answer, setAnswer] = useState<string | undefined>(undefined);
   const { toast } = createStandaloneToast();
   const router = useRouter();
 
   const handleSubmit = () => {
+    setAnswer(undefined);
     if (step.isFinalStep) {
       toast({
         title: 'Request submitted.',
@@ -58,7 +59,13 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
 
       {step.fields.length > 0 && <FormFields fields={step.fields} />}
 
-      <Button onClick={handleSubmit} colorScheme="facebook" rounded="full" maxW={{ sm: 32 }}>
+      <Button
+        disabled={!answer}
+        onClick={handleSubmit}
+        colorScheme="facebook"
+        rounded="full"
+        maxW={{ sm: 32 }}
+      >
         {t(step.submitLabel)}
       </Button>
     </Stack>
