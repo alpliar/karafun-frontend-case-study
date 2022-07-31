@@ -15,7 +15,7 @@ const UiTitle: React.FC<PropsWithChildren<UiTitleProps>> = ({ children, title = 
     >
       {title && (
         <>
-          <Text as="span" color="#4F52FE">
+          <Text as="span" color="blue.100">
             {title}
           </Text>
           {'\n'}
