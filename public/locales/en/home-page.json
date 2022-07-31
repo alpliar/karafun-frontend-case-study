@@ -2,6 +2,6 @@
   "title": "Get started",
   "subtitle": "with $t(common:website.name)",
   "needHelp": "Need help",
-  "descriptionText": "Welcome to KarafunBusiness! \nFollow the steps below to setup your business account.",
+  "descriptionText": "Welcome to $t(common:website.name)! \nFollow the steps below to setup your business account.",
   "usuallyCompletesIn": "Usually completes in {{count}} minutes"
 }

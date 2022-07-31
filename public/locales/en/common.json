@@ -1,10 +1,10 @@
 {
   "website": {
-    "name": "Karafun Business"
+    "name": "KaraFun Business"
   },
   "meta": {
     "title": "$t(common:website.name) | Frontend case study",
-    "description": "An example of implémentation of Karafun frontend case study"
+    "description": "An example of implémentation of KaraFun frontend case study"
   },
   "letsGo": "Let's go",
   "minutes_one": "minute",
