@@ -60,7 +60,7 @@ const FormStepPage: NextPage<IFormStepPageProps> = ({ step, stepNumber }) => {
   return (
     <Stack spacing={10}>
       <Flex wrap={{ base: 'wrap', sm: 'nowrap' }} align="center" justify="center" gap={4}>
-        <Progress colorScheme="orange" rounded="md" value={step.progression} width="full" />
+        <Progress size="lg" colorScheme="orange" rounded="md" value={step.progression} width="full" />
         <Text color="#FB6B4B" whiteSpace="nowrap">
           {step.progression}% completed
         </Text>
