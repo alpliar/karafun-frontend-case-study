@@ -17,7 +17,7 @@ const Header: React.FC = ({}) => {
   const ToggleIcon = useColorModeValue(MoonIcon, SunIcon);
 
   const logoStyle: StyleProps = {
-    filter: useColorModeValue('undefined', 'invert(1)'),
+    filter: useColorModeValue('undefined', 'brightness(15)'),
   };
 
   return (
